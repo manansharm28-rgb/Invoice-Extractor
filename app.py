@@ -514,7 +514,7 @@ if st.session_state.extracted_data:
             else:
                 return "color: orange; font-weight: bold;"
                 
-        styled_df = df_results.style.applymap(format_status, subset=["Status"])
+        styled_df = df_results.style.map(format_status, subset=["Status"])
         st.dataframe(styled_df, use_container_width=True)
         
         # Excel download button
